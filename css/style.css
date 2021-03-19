@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+/* HOME AND TOGGLE */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: "Poppins", sans-serif;
+    color: #111;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p{
+    margin: 20px 0px 10px;
+    font-size: 1.1rem;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation ul li a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+
+.navigation ul li a:hover {
+    color: #672aab;
+}
+
+.navigation .social-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-links a {
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+.navigation .mail-icon {
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.6);
+}
+
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.home-image {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 110%;
+}
+
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #672aab url('../images/menu.png');
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: #672aab url('../images/close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 25px;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 100px;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #672aab;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    margin: 20px 0px;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.home {
+    z-index: 10;
+    position: relative;
+    width: 600px;
+}
+
+/* SERVICE PAGE */  
+
+section.service-home {
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.services {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.services .service .icon img {
+    max-width: 100px;
+}
+
+.services .service {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.services .service:hover{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2{
+    margin-top: 20px;
+    color: #1b206e;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+/* WORK PAGE     */
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.portfolio .item {
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.portfolio .item img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.portfolio .item .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio .item .action a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 8px;
+}
+
+.portfolio .item:hover .action{
+    opacity: 1;
+}
+
+
+
+/* CONTACT PAGE */
+
+.contact{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    position: relative;
+    width: calc(100% - 400px);
+    background: #f9f9f9;
+    padding: 60px 40px 20px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .row {
+    width: 100%;
+    display: flex;
+
+}
+
+.contact-form .input50 {
+    width: 50%;
+    margin: 0px 10px;
+}
+
+.contact-form .input100 {
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact-form .row textarea {
+    height: 150px;
+}
+
+.contact-form .row input[type='submit']{
+    color: white;
+    background: #672aab;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.contact-info{
+    background: #f9f9f9;
+    padding: 60px 40px 20px;
+    width: 350px;
+}
+
+.contact-info .info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-info .info .contact-icon {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.contact-info .info .details h4 {
+    color: #672aab;
+}
+
+.contact-info .info .details  a {
+    text-decoration: none;
+    color: black;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1080px) {
+    .home-image{
+        display: none;
+    }
+
+    .logo{
+        top: 10px;
+        left: 40px;
+        font-size: 1.8rem;
+    }
+
+    section{
+        padding: 100px 40px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form{
+        width: 100%;
+        padding: 30px 30px 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact-info{
+        padding: 30px 30px 20px;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .contact-form .input50,
+    .contact-form .input100{
+        margin: 0;
+        width: 100%;
+    }
+
+    
+}
